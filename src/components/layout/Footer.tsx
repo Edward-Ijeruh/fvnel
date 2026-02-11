@@ -1,0 +1,142 @@
+"use client";
+
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
+import { Phone } from "lucide-react";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+export default function Footer() {
+  return (
+    <footer className="bg-[#292928] text-white">
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
+          {/* About */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, margin: "-80px" }}
+          >
+            <h2 className="text-3xl font-semibold mb-6">Fvnel</h2>
+
+            <p className="text-sm text-gray-300 mb-6">
+              AI Automation · Growth Systems <br />
+              Digital Infrastructure
+            </p>
+
+            <div className="w-12 h-[2px] bg-white mb-6" />
+
+            <p className="text-sm text-gray-300 leading-relaxed">
+              We Build Scalable Acquisition Systems For SaaS, B2B, And Service
+              Brands Ready To Operate At A Higher Level.
+            </p>
+          </motion.div>
+
+          {/* Services */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, margin: "-80px" }}
+            transition={{ delay: 0.1 }}
+            className="lg:border-l lg:border-white lg:pl-10"
+          >
+            <h3 className="text-lg font-semibold mb-6">Services</h3>
+
+            <ul className="space-y-4 text-gray-300">
+              {[
+                "AI Outreach Automation",
+                "SEO & GEO Optimisation",
+                "Social Media Optimisation",
+                "Video & Visual Production",
+                "Web Development & Design",
+              ].map((item) => (
+                <li className="cursor-pointer transition-all duration-300 hover:text-[#285de3] hover:translate-x-1">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Company */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, margin: "-80px" }}
+            transition={{ delay: 0.2 }}
+            className="lg:border-l lg:border-white lg:pl-10"
+          >
+            <h3 className="text-lg font-semibold mb-6">Company</h3>
+
+            <ul className="space-y-4 text-gray-300">
+              {[
+                "Client Onboarding",
+                "Case Studies",
+                "Our Systems",
+                "Contact",
+                "Privacy Policy",
+              ].map((item) => (
+                <li className="cursor-pointer transition-all duration-300 hover:text-[#285de3] hover:translate-x-1">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* CTA */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, margin: "-80px" }}
+            transition={{ delay: 0.3 }}
+            className="lg:border-l lg:border-white lg:pl-10"
+          >
+            <h3 className="text-lg font-semibold mb-4">Ready To Scale?</h3>
+
+            <p className="text-sm text-gray-300 mb-6">
+              Book A Strategy Call And See What Predictable Growth Looks Like.
+            </p>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="flex items-center gap-2 cursor-pointer bg-[#285de3] hover:bg-[#1f4bc0] transition-all duration-300 px-6 py-2.5 rounded-md font-medium shadow-md hover:shadow-lg"
+            >
+              Book A Call
+              <Phone size={16} />
+            </motion.button>
+          </motion.div>
+        </div>
+
+        {/* Bottom Divider */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, margin: "-80px" }}
+          transition={{ delay: 0.4 }}
+          className="border-t border-white mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4"
+        >
+          <p>© 2026 Fvnel. All Rights Reserved.</p>
+          <p className="text-white font-medium">
+            Built For Founders Who Refuse Average.
+          </p>
+        </motion.div>
+      </div>
+    </footer>
+  );
+}

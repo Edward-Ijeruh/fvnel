@@ -127,10 +127,14 @@ const Navbar = () => {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <button className="flex items-center gap-2 cursor-pointer rounded-md bg-[#285de3] px-5 py-2.5 font-medium text-white transition-all duration-300 hover:bg-[#1f4bc0] hover:shadow-lg active:scale-95">
-            Book a call
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="flex items-center gap-2 cursor-pointer bg-[#285de3] hover:bg-[#1f4bc0] transition-all duration-300 px-6 py-2.5 rounded-md font-medium shadow-md hover:shadow-lg text-white"
+          >
+            Book A Call
             <Phone size={16} />
-          </button>
+          </motion.button>
         </div>
 
         {/* Mobile menu button */}

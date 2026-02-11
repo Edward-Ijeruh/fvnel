@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import firstProject from "../../assets/projects/first-project.png";
 import secondProject from "../../assets/projects/second-project.png";
 import thirdProject from "../../assets/projects/third-project.png";
+import fourProject from "../../assets/projects/four-project.png";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -74,7 +75,7 @@ export default function Projects() {
             </motion.div>
 
             <div className="relative overflow-visible">
-              {/* Circle */}
+              {/* Glow */}
               <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-80 h-80 rounded-full bg-white blur-2xl opacity-70 z-0" />
 
               {/* Image */}
@@ -125,7 +126,7 @@ export default function Projects() {
             </motion.div>
 
             <div className="relative overflow-visible">
-              {/* Circle */}
+              {/* Glow */}
               <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-80 h-80 rounded-full bg-[#285de3] blur-2xl opacity-70 z-0" />
 
               {/* Image */}
@@ -177,7 +178,7 @@ export default function Projects() {
             </motion.div>
 
             <div className="relative overflow-visible">
-              {/* Circle */}
+              {/* Glow */}
               <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-80 h-80 rounded-full bg-white blur-2xl opacity-70 z-0" />
 
               {/* Image */}
@@ -189,6 +190,57 @@ export default function Projects() {
                 whileInView="visible"
                 viewport={{ once: false, margin: "-80px" }}
                 className="relative z-10 w-full lg:w-[615px] h-auto lg:h-[355px] rounded-[13px] object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Project 4 */}
+      <div className="bg-white text-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+          <div className="flex justify-between flex-col lg:flex-row-reverse items-center gap-12">
+            {/* Text */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, margin: "-80px" }}
+              className="max-w-lg"
+            >
+              <h3 className="text-3xl md:text-4xl font-semibold mb-2">
+                High-Converting B2B Website Rebuild
+              </h3>
+              <h4 className="text-md uppercase tracking-wide text-gray-600 mb-4">
+                Category: Web Development · UX Optimisation
+              </h4>
+              <p className="text-sm text-gray-700 mb-6">
+                Redesigned and engineered a conversion-focused website that
+                improved clarity, authority, and lead capture performance.
+              </p>
+
+              <button className="group inline-flex items-center gap-2 text-sm font-medium hover:underline hover:text-[#285de3]">
+                Learn more
+                <ArrowRight
+                  size={16}
+                  className="transition-transform duration-300 ease-out group-hover:translate-x-1.5"
+                />
+              </button>
+            </motion.div>
+
+            <div className="relative overflow-visible">
+              {/* Glow */}
+              <div className="absolute left-1/2 -bottom-16 -translate-x-1/2 w-80 h-80 rounded-full bg-[#285de3] blur-2xl opacity-70 z-0" />
+
+              {/* Image */}
+              <motion.img
+                src={fourProject}
+                alt="Second project"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, margin: "-80px" }}
+                className="relative z-10 w-full lg:w-[615px] h-auto lg:h-[355px] rounded-[16px] object-cover"
               />
             </div>
           </div>

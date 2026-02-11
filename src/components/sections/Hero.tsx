@@ -4,7 +4,6 @@ import n8n from "../../assets/hero/n8n.png";
 import chatGpt from "../../assets/hero/chat-gpt.png";
 import spline from "../../assets/hero/spline.png";
 import whatsapp from "../../assets/hero/whatsapp.png";
-// import rectangle from "../../assets/hero/rectangle.png";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 
@@ -53,12 +52,16 @@ const Hero = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="flex items-center justify-center gap-2 cursor-pointer rounded-md bg-[#285de3] px-6 py-3 font-medium text-white transition-all duration-300 hover:bg-[#1f4bc0] hover:shadow-xl active:scale-95">
-                Book a Strategy Call
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className="flex items-center gap-2 cursor-pointer bg-[#285de3] hover:bg-[#1f4bc0] transition-all duration-300 px-6 py-2.5 rounded-md font-medium shadow-md hover:shadow-lg text-white"
+              >
+                Book A Call
                 <Phone size={16} />
-              </button>
+              </motion.button>
 
-              <button className="group flex items-center gap-2 rounded-md border border-[#285de3] bg-white px-6 py-3 font-medium text-[#285de3] transition-all duration-300 hover:bg-[#e6f0ff] active:scale-95 cursor-pointer">
+              <button className="group flex items-center gap-2 rounded-md border border-[#285de3] bg-white px-6 py-3 font-medium text-[#285de3] transition-all duration-300 hover:bg-[#e6f0ff] cursor-pointer">
                 See how the system works
                 <ArrowRight
                   size={16}

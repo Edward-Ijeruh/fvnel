@@ -8,22 +8,60 @@ This project demonstrates a modern landing page layout with interactive hero sec
 
 ## Features
 
-- **Hero Section**
-  - Highlights the company's core offering: AI-powered growth systems.
-  - Call-to-action buttons: "Book a Strategy Call" & "See how the system works".
-  - Animated elements with **Framer Motion**.
+### Hero Section
 
-- **Trusted Platforms Section**
-  - Displays logos of tools used by the company (Framer, n8n, ChatGPT, Spline, WhatsApp).
-  - Hover animations and smooth scroll interactions.
+- Highlights the company’s core offering: AI-powered growth systems.
+- Clear call-to-action buttons: **“Book a Strategy Call”** and **“See How the System Works.”**
+- Smooth entrance animations powered by **Framer Motion**.
 
-- **Responsive Navbar**
-  - Mobile-friendly with animated menu toggle.
-  - Active section tracking and smooth scrolling.
-  - Unified underline style for both desktop and mobile links.
+### Services Section
 
-- **Responsive Design**
-  - Works on all screen sizes with Tailwind CSS.
+- Showcases key service offerings including AI automation, SEO & GEO optimisation, media production, and web development.
+- Clean card-based layout with subtle hover interactions.
+- Fully responsive grid structure.
+
+### Projects Section
+
+- Displays featured client projects and case studies.
+- Visual-first layout to demonstrate execution quality and results.
+- Animated reveal effects on scroll.
+
+### Testimonials Section
+
+- Structured social proof from clients and partners.
+- Designed to build credibility and trust.
+- Scroll-triggered animations for smooth engagement.
+
+### Industries Section
+
+- Highlights industries served: Local Business, Real Estate, E-Commerce, Healthcare, and Service Providers.
+- Background image cards with floating content panels.
+- Animated entrance transitions with responsive grid layout.
+
+### Responsive Navbar
+
+- Mobile-friendly navigation with animated menu toggle.
+- Active section tracking and smooth scrolling.
+- Unified underline style across desktop and mobile links.
+
+### Footer
+
+- Structured multi-column layout.
+- Interactive hover states for service and company links.
+- Clear call-to-action section for booking strategy calls.
+- Fully responsive design.
+
+### Responsive Design
+
+- Built with **Tailwind CSS**.
+- Optimized for mobile, tablet, and desktop devices.
+- Consistent spacing system and typography scale.
+
+### Animations
+
+- Scroll-triggered animations using **Framer Motion**.
+- Subtle hover effects and motion interactions.
+- Performance-conscious animation configuration.
 
 ---
 

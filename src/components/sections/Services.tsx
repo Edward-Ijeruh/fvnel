@@ -106,7 +106,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              transition={{ duration: 0.5, delay: idx * 0.2 }}
             >
               {/* Image */}
               <img src={card.img} alt={card.title} className="h-12 w-12" />
@@ -153,10 +153,14 @@ export default function Services() {
             setup, identify gaps, and map a growth system tailored to your
             business.
           </p>
-          <button className="flex items-center gap-2 mx-auto cursor-pointer rounded-md bg-[#285de3] px-5 py-2.5 font-medium text-white transition-all duration-300 hover:bg-[#1f4bc0] hover:shadow-lg active:scale-95">
-            Book a Strategy Call
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="flex items-center gap-2 mx-auto cursor-pointer bg-[#285de3] hover:bg-[#1f4bc0] transition-all duration-300 px-6 py-2.5 rounded-md font-medium shadow-md hover:shadow-lg text-white"
+          >
+            Book A Call
             <Phone size={16} />
-          </button>
+          </motion.button>
         </motion.div>
       </div>
     </section>
