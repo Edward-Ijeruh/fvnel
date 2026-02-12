@@ -55,13 +55,13 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-2 cursor-pointer bg-[#285de3] hover:bg-[#1f4bc0] transition-all duration-300 px-6 py-2.5 rounded-md font-medium shadow-md hover:shadow-lg text-white"
+                className="flex items-center gap-2 justify-center cursor-pointer bg-[#285de3] hover:bg-[#1f4bc0] transition-all duration-300 px-6 py-2.5 rounded-md font-medium shadow-md hover:shadow-lg text-white"
               >
                 Book A Call
                 <Phone size={16} />
               </motion.button>
 
-              <button className="group flex items-center gap-2 rounded-md border border-[#285de3] bg-white px-6 py-3 font-medium text-[#285de3] transition-all duration-300 hover:bg-[#e6f0ff] cursor-pointer">
+              <button className="group flex items-center gap-2 justify-center rounded-md border border-[#285de3] bg-white px-6 py-3 font-medium text-[#285de3] transition-all duration-300 hover:bg-[#e6f0ff] cursor-pointer">
                 See how the system works
                 <ArrowRight
                   size={16}

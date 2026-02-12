@@ -65,7 +65,7 @@ export default function Projects() {
                 safely without account risk.
               </p>
 
-              <button className="group inline-flex items-center gap-2 text-sm font-medium hover:underline hover:text-[#285de3]">
+              <button className="group inline-flex items-center gap-2 text-sm font-medium hover:underline hover:text-[#285de3] cursor-pointer">
                 Learn more
                 <ArrowRight
                   size={16}
@@ -116,7 +116,7 @@ export default function Projects() {
                 performance tracking.
               </p>
 
-              <button className="group inline-flex items-center gap-2 text-sm font-medium hover:underline hover:text-[#285de3]">
+              <button className="group inline-flex items-center gap-2 text-sm font-medium hover:underline hover:text-[#285de3] cursor-pointer">
                 Learn more
                 <ArrowRight
                   size={16}
@@ -168,7 +168,7 @@ export default function Projects() {
                 targeted regions
               </p>
 
-              <button className="group inline-flex items-center gap-2 text-sm font-medium hover:underline hover:text-[#285de3]">
+              <button className="group inline-flex items-center gap-2 text-sm font-medium hover:underline hover:text-[#285de3] cursor-pointer">
                 Learn more
                 <ArrowRight
                   size={16}
@@ -219,7 +219,7 @@ export default function Projects() {
                 improved clarity, authority, and lead capture performance.
               </p>
 
-              <button className="group inline-flex items-center gap-2 text-sm font-medium hover:underline hover:text-[#285de3]">
+              <button className="group inline-flex items-center gap-2 text-sm font-medium hover:underline hover:text-[#285de3] cursor-pointer">
                 Learn more
                 <ArrowRight
                   size={16}

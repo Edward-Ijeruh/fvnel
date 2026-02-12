@@ -77,6 +77,7 @@ export default function Industries() {
             className="relative w-full max-w-md rounded-xl overflow-hidden shadow-lg"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.03 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.5, delay: idx * 0.2 }}
           >
