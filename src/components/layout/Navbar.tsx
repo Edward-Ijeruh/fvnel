@@ -143,9 +143,13 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden md:block">
           <Link to="/contact">
-            <button className="bg-[#285de3] hover:bg-[#1f4bc0] px-6 py-2.5 rounded-md text-white font-medium shadow-md cursor-pointer">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="bg-[#285de3] hover:bg-[#1f4bc0] px-6 py-2.5 rounded-md text-white font-medium shadow-md cursor-pointer"
+            >
               Get Started
-            </button>
+            </motion.button>
           </Link>
         </div>
 

@@ -126,7 +126,7 @@ const Hero = () => {
               href="/contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:shadow-2xl cursor-pointer"
+              className="flex items-center justify-center rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#1f4bc0] hover:shadow-2xl cursor-pointer"
             >
               Get Started
             </motion.a>
