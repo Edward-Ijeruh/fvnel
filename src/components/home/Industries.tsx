@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import type { Variants } from "framer-motion";
 import localBusiness from "../../assets/industries/local-business.png";
 import realEstate from "../../assets/industries/real-estete.png";
 import eCommerce from "../../assets/industries/e-commerce.png";
 import healthcare from "../../assets/industries/healthcare.png";
 import serviceProviders from "../../assets/industries/service-providers.png";
-import { Phone } from "lucide-react";
+import b2b from "../../assets/industries/b2b-saas.png";
 
 const industriesData = [
   {
@@ -38,6 +39,12 @@ const industriesData = [
       "Websites and workflows built to qualify leads, reduce low-quality enquiries, and streamline operations.",
     image: serviceProviders,
   },
+  {
+    title: "B2B SaaS",
+    description:
+      "Optimized websites and automated workflows that drive qualified leads, shorten sales cycles, and scale software business operations efficiently.",
+    image: b2b,
+  },
 ];
 
 const fadeUp: Variants = {
@@ -51,7 +58,10 @@ const fadeUp: Variants = {
 
 export default function Industries() {
   return (
-    <section id="industries" className="bg-white py-32 px-4">
+    <section
+      id="industries"
+      className="relative -mt-24 bg-[#eeeae7] pt-40 pb-28 px-4"
+    >
       {/* Header */}
       <motion.div
         className="text-center max-w-7xl mx-auto mb-24"
@@ -61,11 +71,12 @@ export default function Industries() {
         viewport={{ once: false, margin: "-100px" }}
       >
         <h2 className="text-3xl md:text-5xl font-bold mb-4">
-          Industries We Work With
+          Industries We Power <span className="text-[#1A5AFF]">Power</span>
         </h2>
         <p className="text-gray-600">
-          Fvnel works with businesses where leads, speed, and operational
-          efficiency directly impact revenue
+          Every industry has unique workflows, customer journeys, and growth
+          challenges. Our systems <br /> adapt to the way your business actually
+          operates.
         </p>
       </motion.div>
 
@@ -103,6 +114,20 @@ export default function Industries() {
         )}
       </div>
 
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+        className="text-[#285de3] mt-20 text-center font-semibold"
+      >
+        While every industry operates differently, our core architecture remains{" "}
+        <br />
+        consistent, diagnose, architect, and deploy systems tailored to specific{" "}
+        <br />
+        workflows and customer journeys.
+      </motion.p>
+
       {/* CTA */}
       <motion.div
         className="mt-8 text-center"
@@ -116,14 +141,15 @@ export default function Industries() {
           Fits?
         </h3>
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="flex items-center gap-2 mx-auto cursor-pointer bg-[#285de3] hover:bg-[#1f4bc0] transition-all duration-300 px-6 py-2.5 rounded-md font-medium shadow-md hover:shadow-lg text-white"
-        >
-          Book A Strategy Call
-          <Phone size={16} />
-        </motion.button>
+        <Link to="/contact">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className=" mx-auto cursor-pointer bg-[#285de3] hover:bg-[#1f4bc0] transition-all duration-300 px-6 py-2.5 rounded-md font-medium shadow-md hover:shadow-lg text-white"
+          >
+            Call Us
+          </motion.button>
+        </Link>
       </motion.div>
     </section>
   );

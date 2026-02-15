@@ -1,0 +1,17 @@
+import Hero from "../components/home/Hero";
+import About from "../components/home/About";
+import Services from "../components/home/Services";
+import Testimonial from "../components/home/Testimonials";
+import Industries from "../components/home/Industries";
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <About />
+      <Services />
+      <Testimonial />
+      <Industries />
+    </>
+  );
+}
