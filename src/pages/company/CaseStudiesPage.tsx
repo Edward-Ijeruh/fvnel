@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Link } from "react-router-dom";
+import weDesign from "../../assets/common/case-studies/we-design.jpeg";
+import aIAut from "../../assets/common/case-studies/aiauto.jpeg";
+import seoGeo from "../../assets/common/case-studies/seogeo.jpeg";
+import somedia from "../../assets/common/case-studies/somedia.jpeg";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 60 },
@@ -130,7 +134,7 @@ export default function CaseStudiesPage() {
         <CaseSection
           title="Web Design & Development Transformation"
           industry="B2B SaaS"
-          image="/images/case-web.png"
+          image={weDesign}
           intro="Traffic existed, but trust didn’t. The website created hesitation where confidence should have been automatic."
           milestones={[
             {
@@ -172,7 +176,7 @@ export default function CaseStudiesPage() {
         <CaseSection
           title="AI Automation & Operations System"
           industry="Agency"
-          image="/images/case-ai.png"
+          image={aIAut}
           intro="Growth created operational drag. The team worked harder each month just to maintain momentum."
           milestones={[
             {
@@ -212,7 +216,7 @@ export default function CaseStudiesPage() {
         <CaseSection
           title="SEO & GEO Authority System"
           industry="Local Network"
-          image="/images/case-seo.png"
+          image={seoGeo}
           intro="Paid advertising drove visibility, but organic presence was fragile and inconsistent."
           milestones={[
             {
@@ -252,7 +256,7 @@ export default function CaseStudiesPage() {
         <CaseSection
           title="Social Media & Visual Production Engine"
           industry="Creator / Courses"
-          image="/images/case-social.png"
+          image={somedia}
           intro="High content output produced attention but not conversions."
           milestones={[
             {

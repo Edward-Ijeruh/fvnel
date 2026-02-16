@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import logo from "../../assets/common/logo.png";
 import { Link } from "react-router-dom";
+import { Mail, Phone } from "lucide-react";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -138,6 +139,31 @@ export default function Footer() {
                 Book A Call
               </motion.button>
             </Link>
+
+            {/* Contact Info */}
+            <div className="space-y-3 mt-8 text-gray-300 text-sm">
+              {/* Email */}
+              <a
+                href="mailto:Jerryogbolosingha@gmail.com"
+                className="flex items-center gap-3 hover:text-white transition-colors"
+              >
+                <div className="w-6 h-6 flex items-center justify-center bg-[#1A5AFF]/10 rounded-full">
+                  <Mail className="w-5 h-5 text-[#1A5AFF]" />
+                </div>
+                jerryogbolosingha@gmail.com
+              </a>
+
+              {/* Phone */}
+              <a
+                href="tel:+61428210556"
+                className="flex items-center gap-3 hover:text-white transition-colors"
+              >
+                <div className="w-6 h-6 flex items-center justify-center bg-[#1A5AFF]/10 rounded-full">
+                  <Phone className="w-5 h-5 text-[#1A5AFF]" />
+                </div>
+                +61 428 210 556
+              </a>
+            </div>
           </motion.div>
         </div>
 

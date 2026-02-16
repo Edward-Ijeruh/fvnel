@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Mail, Clock3, Shield } from "lucide-react";
+import { Mail, Clock3, Shield, Phone, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const fadeUp: Variants = {
@@ -53,6 +53,47 @@ export default function ContactPage() {
             this is the first step. Tell us what you’re trying to achieve, we’ll
             guide you toward the clearest next move.
           </motion.p>
+
+          {/* ================= CONTACT INFO ================= */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            className="max-w-md mx-auto mt-8 space-y-3 text-gray-700 text-sm"
+          >
+            {/* Email */}
+            <a
+              href="mailto:Jerryogbolosingha@gmail.com"
+              className="flex items-center gap-3 hover:text-[#1A5AFF] transition-colors"
+            >
+              <div className="w-6 h-6 flex items-center justify-center bg-[#1A5AFF]/10 rounded-full">
+                <Mail className="w-5 h-5 text-[#1A5AFF]" />
+              </div>
+              jerryogbolosingha@gmail.com
+            </a>
+
+            {/* Phone */}
+            <a
+              href="tel:+61428210556"
+              className="flex items-center gap-3 hover:text-[#1A5AFF] transition-colors"
+            >
+              <div className="w-6 h-6 flex items-center justify-center bg-[#1A5AFF]/10 rounded-full">
+                <Phone className="w-5 h-5 text-[#1A5AFF]" />
+              </div>
+              +61 428 210 556
+            </a>
+
+            {/* Maintenance Info */}
+            <div className="flex items-center gap-3 bg-yellow-50 text-yellow-800 p-3 rounded-lg border border-yellow-200 mt-4">
+              <div className="w-8 h-8 flex items-center justify-center">
+                <Info className="w-6 h-6" />
+              </div>
+              <span className="text-sm">
+                Our contact form is currently undergoing maintenance. Please use
+                the email or phone above to reach us directly.
+              </span>
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* ================= CONTACT OPTIONS ================= */}

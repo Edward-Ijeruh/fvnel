@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import type { Variants } from "framer-motion";
+import { Info } from "lucide-react";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -35,6 +36,24 @@ export default function OnboardingPage() {
           <p className="text-slate-700">
             A few quick questions so we can design the right system for you.
           </p>
+        </motion.div>
+
+        {/* Maintenance Info */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          className="max-w-md mx-auto mt-8 space-y-3 text-gray-700 text-sm"
+        >
+          <div className="flex items-center gap-3 bg-yellow-50 text-yellow-800 p-3 rounded-lg border border-yellow-200 mt-4 mb-6">
+            <div className="w-8 h-8 flex items-center justify-center">
+              <Info className="w-6 h-6" />
+            </div>
+            <span className="text-sm">
+              Our Onboarding page is currently undergoing maintenance. Please
+              use the email or phone on the Contact page to reach us directly.
+            </span>
+          </div>
         </motion.div>
 
         {/* ================= PROGRESS BAR ================= */}
