@@ -1,191 +1,191 @@
-import type { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import type { Variants } from "framer-motion";
-import {
-  Bot,
-  Globe,
-  Users,
-  Search,
-  Palette,
-  ArrowRight,
-  CheckCircle,
-} from "lucide-react";
+import { Globe, Brain, Search, Video, Layers } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 60 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
   },
 };
-
-type SectionProps = {
-  children: ReactNode;
-  className?: string;
-};
-
-const Section = ({ children, className = "" }: SectionProps) => (
-  <motion.section
-    variants={fadeUp}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true, amount: 0.2 }}
-    className={`max-w-6xl mx-auto px-6 py-20 ${className}`}
-  >
-    {children}
-  </motion.section>
-);
 
 const systems = [
   {
-    icon: Bot,
-    title: "AI Automation Systems",
-    problem:
-      "Manual workflows slow growth, create bottlenecks, and waste valuable team time.",
-    process: [
-      "Audit business operations & automation opportunities",
-      "Design AI workflows aligned with business goals",
-      "Integrate tools and triggers across your stack",
-      "Deploy, test, and optimize automation loops",
-    ],
-    outcome:
-      "Faster execution, reduced overhead, and scalable operations without hiring more staff.",
+    icon: <Globe />,
+    title: "Web Design & Development",
+    subtitle: "Trust & perception",
+    text: "Websites engineered around decision psychology, clarity, and conversion, not templates.",
+    path: "/web-development",
   },
   {
-    icon: Globe,
-    title: "Website Development & UX/UI Systems",
-    problem:
-      "Many sites look good but fail to convert because they lack psychological structure.",
-    process: [
-      "Conversion-focused strategy mapping",
-      "User journey & funnel architecture",
-      "Premium interface design",
-      "Performance-focused React development",
-    ],
-    outcome:
-      "Higher conversions, clearer messaging, and a digital presence that builds trust instantly.",
-  },
-  {
-    icon: Users,
-    title: "Social Media Growth Systems",
-    problem: "Inconsistent posting and random content fail to build authority.",
-    process: [
-      "Define content pillars & audience psychology",
-      "Create scalable production workflow",
-      "Automate publishing & engagement",
-      "Optimize based on performance data",
-    ],
-    outcome:
-      "Consistent visibility, stronger personal authority, and predictable inbound leads.",
-  },
-  {
-    icon: Search,
+    icon: <Search />,
     title: "SEO & GEO Systems",
-    problem:
-      "Businesses rely too heavily on paid ads and miss long-term organic growth.",
-    process: [
-      "Search intent & geographic opportunity research",
-      "Technical optimization",
-      "Content + landing page architecture",
-      "Authority and ranking strategy execution",
-    ],
-    outcome: "Sustainable traffic growth and compounding lead generation.",
+    subtitle: "Discovery infrastructure",
+    text: "Structured visibility systems for search engines, maps, and AI-driven discovery.",
+    path: "/seo-geo",
   },
   {
-    icon: Palette,
-    title: "Brand Design Systems",
-    problem:
-      "Generic branding lowers perceived value and weakens pricing power.",
-    process: [
-      "Positioning workshop",
-      "Visual identity system creation",
-      "Brand messaging framework",
-      "Implementation across digital touchpoints",
-    ],
-    outcome: "Stronger market positioning and higher-value client perception.",
+    icon: <Brain />,
+    title: "AI Automation",
+    subtitle: "Operational leverage",
+    text: "AI-powered workflows that remove bottlenecks and scale execution without headcount.",
+    path: "/ai-automation",
+  },
+  {
+    icon: <Video />,
+    title: "Visual Production",
+    subtitle: "Attention & authority",
+    text: "High-performance visuals that build trust and communicate value instantly.",
+    path: "/visual-production",
+  },
+  {
+    icon: <Layers />,
+    title: "Social Media Optimization",
+    subtitle: "Distribution systems",
+    text: "Content frameworks designed to turn visibility into predictable inbound demand.",
+    path: "/social-media",
   },
 ];
 
-export default function SystemsPage() {
+export default function OurSystemsPage() {
+  const { scrollYProgress } = useScroll();
+  const heroY = useTransform(scrollYProgress, [0, 1], [0, -120]);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+
   return (
-    <div className="bg-[#181818] text-white min-h-screen">
-      {/* HERO */}
-      <Section className="pt-28 text-center">
-        <p className="text-sm uppercase tracking-[0.25em] text-[#EEEAE7] mb-4">
-          Our Systems
-        </p>
-        <h1 className="text-4xl md:text-6xl font-semibold mb-6">
-          We Don’t Offer Services.
-          <br />
-          We Build Growth Systems.
-        </h1>
-        <p className="text-[#EEEAE7] max-w-3xl mx-auto text-lg">
-          Every system is designed to remove bottlenecks, increase efficiency,
-          and create predictable growth — engineered around your business goals.
-        </p>
-      </Section>
+    <section className="relative overflow-hidden bg-white">
+      {/* ===== BACKGROUND DEPTH ===== */}
+      <motion.div
+        style={{ scale: bgScale }}
+        className="absolute inset-0 pointer-events-none"
+      >
+        <div className="absolute top-[-180px] left-[-180px] w-[500px] h-[500px] bg-[#1A5AFF]/10 blur-[130px]" />
+        <div className="absolute bottom-[-220px] right-[-180px] w-[500px] h-[500px] bg-[#1A5AFF]/10 blur-[140px]" />
+      </motion.div>
 
-      {/* SYSTEMS LIST */}
-      <Section>
-        <div className="space-y-10">
-          {systems.map((system, i) => (
-            <motion.div
-              key={i}
-              variants={fadeUp}
-              className="bg-[#EEEAE7] text-[#181818] rounded-2xl p-8 md:p-10"
-            >
-              <div className="flex items-start gap-4 mb-6">
-                <system.icon className="w-6 h-6 text-[#1A5AFF]" />
-                <h3 className="text-2xl font-semibold">{system.title}</h3>
-              </div>
+      <div className="relative max-w-7xl mx-auto px-6 pt-40 pb-32">
+        {/* ================= HERO ================= */}
+        <motion.div style={{ y: heroY }} className="text-center mb-32">
+          <motion.h1
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="text-4xl md:text-6xl font-bold mb-6"
+          >
+            Growth Systems <br />
+            <span className="text-[#1A5AFF]">
+              Designed to Compound Together
+            </span>
+          </motion.h1>
 
-              <p className="text-[#333] mb-6 leading-relaxed">
-                <strong>Problem:</strong> {system.problem}
-              </p>
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+            className="max-w-3xl mx-auto text-slate-700 text-lg"
+          >
+            We don’t sell disconnected services. We design interconnected
+            systems where trust, discovery, automation, and distribution
+            reinforce each other over time.
+          </motion.p>
+        </motion.div>
 
-              <div className="mb-6">
-                <h4 className="font-semibold mb-3">Our Process</h4>
-                <div className="grid md:grid-cols-2 gap-3">
-                  {system.process.map((step, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-start gap-2 text-sm text-[#333]"
-                    >
-                      <CheckCircle className="w-4 h-4 text-[#1A5AFF] mt-1" />
-                      <span>{step}</span>
-                    </div>
-                  ))}
+        {/* ================= SYSTEMS OVERVIEW ================= */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          className="mb-32"
+        >
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+              The Core Systems
+            </h2>
+            <p className="max-w-2xl mx-auto text-slate-600">
+              Each system solves a specific growth constraint. Together, they
+              create momentum.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {systems.map((item, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -6 }}
+                className="rounded-2xl bg-[#EEEAE7] p-8 shadow-sm hover:shadow-lg transition"
+              >
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#1A5AFF]/10 text-[#1A5AFF] mb-5">
+                  {item.icon}
                 </div>
-              </div>
 
-              <p className="text-[#1A5AFF] font-medium leading-relaxed">
-                Outcome: {system.outcome}
-              </p>
+                <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
+                <p className="text-sm text-[#1A5AFF] font-medium mb-3">
+                  {item.subtitle}
+                </p>
 
-              <button className="mt-6 flex items-center gap-2 text-[#1A5AFF] font-medium hover:underline">
-                View Related Case Study
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </motion.div>
-          ))}
-        </div>
-      </Section>
+                <p className="text-slate-700 mb-6 leading-relaxed">
+                  {item.text}
+                </p>
 
-      {/* CTA */}
-      <Section className="text-center pb-28">
-        <h2 className="text-4xl font-semibold mb-4">
-          Ready to Build Your Growth System?
-        </h2>
-        <p className="text-[#EEEAE7] mb-8 max-w-xl mx-auto">
-          If your business feels stuck or chaotic, the solution isn’t more work
-          — it’s better systems.
-        </p>
+                <Link
+                  to={item.path}
+                  className="inline-flex text-[#1A5AFF] font-medium hover:underline"
+                >
+                  Explore system
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-        <button className="px-8 py-3 rounded-xl bg-[#1A5AFF] text-white font-medium hover:opacity-90 transition">
-          Start Your Onboarding
-        </button>
-      </Section>
-    </div>
+        {/* ================= SYSTEM INSIGHT ================= */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          className="rounded-2xl bg-[#1A5AFF] p-14 text-center text-white mb-32"
+        >
+          <h3 className="text-3xl md:text-4xl font-semibold mb-6">
+            Growth fails when systems don’t talk to each other.
+          </h3>
+
+          <p className="max-w-3xl mx-auto text-[#EEEAE7]">
+            Most teams struggle not because of effort, but because each layer
+            operates in isolation. We design cohesion first.
+          </p>
+        </motion.div>
+
+        {/* ================= CTA ================= */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          className="text-center"
+        >
+          <h3 className="text-3xl md:text-4xl font-semibold mb-6">
+            Identify Your Biggest Growth Constraint
+          </h3>
+
+          <p className="max-w-xl mx-auto text-slate-700 mb-8">
+            Start with onboarding and we’ll show you which system unlocks the
+            fastest compounding results.
+          </p>
+
+          <Link to="/onboarding">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white shadow-lg hover:bg-[#1f4bc0] cursor-pointer"
+            >
+              Start Onboarding
+            </motion.button>
+          </Link>
+        </motion.div>
+      </div>
+    </section>
   );
 }

@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
+import ScrollToTop from "./utils/ScrollToTop";
 
 import Home from "./pages/Home";
-import AIAutomation from "./pages//services/AIAutomation";
+import AIAutomation from "./pages/services/AIAutomation";
 import SeoGeo from "./pages/services/SeoGeo";
 import SocialMedia from "./pages/services/SocialMedia";
 import VisualProduction from "./pages/services/VisualProduction";
@@ -18,6 +19,7 @@ import Contact from "./pages/Contact";
 export default function AppRouter() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"

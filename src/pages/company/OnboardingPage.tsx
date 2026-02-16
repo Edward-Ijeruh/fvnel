@@ -29,7 +29,8 @@ export default function OnboardingPage() {
           className="text-center mb-14"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Let’s Understand Your Business
+            Let’s <span className="text-[#1A5AFF]">Understand</span> Your
+            Business
           </h1>
           <p className="text-slate-700">
             A few quick questions so we can design the right system for you.
