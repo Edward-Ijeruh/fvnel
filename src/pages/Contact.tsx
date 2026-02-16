@@ -84,11 +84,11 @@ export default function ContactPage() {
             </a>
 
             {/* Maintenance Info */}
-            <div className="flex items-center gap-3 bg-yellow-50 text-yellow-800 p-3 rounded-lg border border-yellow-200 mt-4">
+            <div className="flex items-center gap-3 bg-yellow-50 text-yellow-800 p-3 rounded-lg border border-yellow-200 my-6">
               <div className="w-8 h-8 flex items-center justify-center">
                 <Info className="w-6 h-6" />
               </div>
-              <span className="text-sm">
+              <span className="text-sm text-start">
                 Our contact form is currently undergoing maintenance. Please use
                 the email or phone above to reach us directly.
               </span>

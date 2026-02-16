@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import type { Variants } from "framer-motion";
 import { Info } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -49,9 +50,16 @@ export default function OnboardingPage() {
             <div className="w-8 h-8 flex items-center justify-center">
               <Info className="w-6 h-6" />
             </div>
-            <span className="text-sm">
+            <span className="text-sm text-start">
               Our Onboarding page is currently undergoing maintenance. Please
-              use the email or phone on the Contact page to reach us directly.
+              use the email or phone on the{" "}
+              <Link
+                to="/contact"
+                className="underline font-medium text-yellow-900 hover:text-yellow-700"
+              >
+                Contact page
+              </Link>{" "}
+              to reach us directly.
             </span>
           </div>
         </motion.div>
