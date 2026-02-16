@@ -14,11 +14,11 @@ const fadeUp: Variants = {
 
 const systems = [
   {
-    icon: <Globe />,
-    title: "Web Design & Development",
-    subtitle: "Trust & perception",
-    text: "Websites engineered around decision psychology, clarity, and conversion, not templates.",
-    path: "/web-development",
+    icon: <Brain />,
+    title: "AI Automation",
+    subtitle: "Operational leverage",
+    text: "AI-powered workflows that remove bottlenecks and scale execution without headcount.",
+    path: "/ai-automation",
   },
   {
     icon: <Search />,
@@ -28,11 +28,11 @@ const systems = [
     path: "/seo-geo",
   },
   {
-    icon: <Brain />,
-    title: "AI Automation",
-    subtitle: "Operational leverage",
-    text: "AI-powered workflows that remove bottlenecks and scale execution without headcount.",
-    path: "/ai-automation",
+    icon: <Layers />,
+    title: "Social Media Optimization",
+    subtitle: "Distribution systems",
+    text: "Content frameworks designed to turn visibility into predictable inbound demand.",
+    path: "/social-media",
   },
   {
     icon: <Video />,
@@ -42,11 +42,11 @@ const systems = [
     path: "/visual-production",
   },
   {
-    icon: <Layers />,
-    title: "Social Media Optimization",
-    subtitle: "Distribution systems",
-    text: "Content frameworks designed to turn visibility into predictable inbound demand.",
-    path: "/social-media",
+    icon: <Globe />,
+    title: "Web Design & Development",
+    subtitle: "Trust & perception",
+    text: "Websites engineered around decision psychology, clarity, and conversion, not templates.",
+    path: "/web-development",
   },
 ];
 
