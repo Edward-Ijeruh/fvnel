@@ -10,6 +10,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import diagram from "../../assets/common/visual-diagram.jpeg";
+import image from "../../assets/common/content-workflow.jpg";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 60 },
@@ -70,11 +72,11 @@ export default function VisualProductionPage() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          className="mb-32"
+          className="max-w-2xl mx-auto mb-32"
         >
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="/images/video-production-showcase.png"
+              src={diagram}
               alt="Video production visuals"
               className="w-full"
             />
@@ -172,11 +174,11 @@ export default function VisualProductionPage() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          className="mb-32"
+          className="max-w-2xl mx-auto mb-32"
         >
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="/images/content-workflow.png"
+              src={image}
               alt="Content workflow dashboard"
               className="w-full"
             />

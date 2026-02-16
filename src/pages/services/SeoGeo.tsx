@@ -10,6 +10,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import diagram from "../../assets/common/seo-diagram.jpeg";
+import image from "../../assets/common/seo-image.jpg";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 60 },
@@ -70,11 +72,11 @@ export default function SeoGeoPage() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          className="mb-32"
+          className="max-w-2xl mx-auto mb-32"
         >
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="/images/search-ecosystem.png"
+              src={diagram}
               alt="Search ecosystem diagram"
               className="w-full"
             />
@@ -172,11 +174,11 @@ export default function SeoGeoPage() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          className="mb-32"
+          className="max-w-2xl mx-auto mb-32"
         >
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="/images/seo-dashboard.png"
+              src={image}
               alt="SEO performance dashboard"
               className="w-full"
             />

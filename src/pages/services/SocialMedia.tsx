@@ -10,6 +10,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import diagram from "../../assets/common/media-diagram.jpeg";
+import image from "../../assets/common/content-analysis.jpg";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 60 },
@@ -71,11 +73,11 @@ export default function SocialMediaOptimizationPage() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          className="mb-32"
+          className="max-w-2xl mx-auto mb-32"
         >
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="/images/social-system-map.png"
+              src={diagram}
               alt="Social media system flow"
               className="w-full"
             />
@@ -173,11 +175,11 @@ export default function SocialMediaOptimizationPage() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          className="mb-32"
+          className="max-w-2xl mx-auto mb-32"
         >
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="/images/content-dashboard.png"
+              src={image}
               alt="Content analytics dashboard"
               className="w-full"
             />

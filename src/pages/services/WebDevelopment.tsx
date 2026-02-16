@@ -8,6 +8,8 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import diCarpi from "../../assets/common/di-carpi.jpeg";
+import steps from "../../assets/common/steps.jpeg";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 70 },
@@ -65,23 +67,40 @@ export default function WebDevelopmentDesignPage() {
         </motion.div>
 
         {/* ================= IMAGE SECTION ================= */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          className="mb-36"
-        >
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src="/images/web-showcase.png"
-              alt="Premium web design showcase"
-              className="w-full"
-            />
+        <motion.div className="max-w-6xl mx-auto mb-36">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image 1 */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.4 }}
+              transition={{ delay: 0 }}
+              className="rounded-2xl overflow-hidden border border-slate-200 shadow-xl"
+            >
+              <img
+                src={diCarpi}
+                alt="Premium web design showcase"
+                className="w-full h-[260px] md:h-[340px] object-cover"
+              />
+            </motion.div>
+
+            {/* Image 2 */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.4 }}
+              transition={{ delay: 0.15 }}
+              className="rounded-2xl overflow-hidden border border-slate-200 shadow-xl"
+            >
+              <img
+                src={steps}
+                alt="Structured design & development process"
+                className="w-full h-[260px] md:h-[340px] object-cover"
+              />
+            </motion.div>
           </div>
-          {/* <p className="text-sm text-slate-500 mt-4 text-center">
-            Suggested image: premium website mockups, live UI screens,
-            interaction previews.
-          </p> */}
         </motion.div>
 
         {/* ================= INSIGHT PROBLEM ================= */}

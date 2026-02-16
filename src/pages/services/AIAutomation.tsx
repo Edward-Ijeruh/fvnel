@@ -9,6 +9,8 @@ import {
   BarChart3,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import diagram from "../../assets/common/ai-diagram.jpeg";
+import dashboard from "../../assets/common/automation-image.jpg";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 60 },
@@ -70,11 +72,11 @@ export default function AiSystemsPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.3 }}
-          className="mb-32"
+          className="max-w-2xl mx-auto mb-32"
         >
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="/images/ai-system-architecture.png"
+              src={diagram}
               alt="AI systems architecture diagram"
               className="w-full"
             />
@@ -170,11 +172,11 @@ export default function AiSystemsPage() {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          className="mb-32"
+          className="max-w-2xl mx-auto mb-32"
         >
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="/images/dashboard-proof.png"
+              src={dashboard}
               alt="Automation dashboard"
               className="w-full"
             />
